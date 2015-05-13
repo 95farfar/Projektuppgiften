@@ -57,21 +57,21 @@ public class MainActivity extends ActionBarActivity {
 
     //In this method we costimize what menu options we would like the user to choose from when the
     // pop up menu is shown. In our case we either want to delete the item or just cancel and return
+
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v,ContextMenu.ContextMenuInfo menuInfo){
-       if(v.getId() != R.id.listViewShoppingList){
-           return;
-       }
+        if(v.getId() != R.id.listViewShoppingList){
+            return;
+        }
 
-       menu.setHeaderTitle("What would you like to do??");
-       String[] options = {"Delete Item", "Return"};
+        menu.setHeaderTitle("What would you like to do??");
+        String[] options = {"Delete Item", "Return"};
 
-       for(String option : options){
-           menu.add(option);
-       }
+        for(String option : options){
+            menu.add(option);
+        }
 
     }
-
     //In this method we preforme what the user chose from the pop up meny, if he/she wanted to
     //delete then we remove the item from the list otherwise we leave it as it is. We also get the
     //index of the selected item so we can remove it from the arraylist
@@ -104,6 +104,7 @@ public class MainActivity extends ActionBarActivity {
         }catch(Exception e){
             Log.i("On back pressed", e.getMessage());
         }
+
     }
     //When the button is pressed we add the text in the textfeild to the viewlist, if the textfield
     //is empty then we dont do a thing. After that the button is clicked we clear the textfeild.
